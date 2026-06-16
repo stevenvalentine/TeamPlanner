@@ -66,4 +66,1084 @@ body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#0f1117;
 .kpi-lbl{font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:8px;}
 .kpi-val{font-size:34px;font-weight:800;line-height:1;}
 .kpi.blue .kpi-val{color:#60a5fa;}.kpi.green .kpi-val{color:#34d399;}.kpi.amber .kpi-val{color:#fbbf24;}
+.kpi.red .kpi-val{color:#f87171;}.kpi.purple .kpi-val{color:#a78bfa;}.kpi.cyan .kpi-val{color:#22d3ee;}
+.kpi.orange .kpi-val{color:#fb923c;}.kpi.pink .kpi-val{color:#f472b6;}
+.kpi-sub{font-size:10px;color:#475569;margin-top:4px;}
+.kpi-ghost{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:30px;opacity:.1;}
+/* Chart cards */
+.row{display:grid;gap:18px;margin-bottom:18px;}
+.r1{grid-template-columns:1fr;}
+.r2{grid-template-columns:1fr 1fr;}
+.r3{grid-template-columns:1fr 1fr 1fr;}
+.r21{grid-template-columns:2fr 1fr;}
+.r12{grid-template-columns:1fr 2fr;}
+.card{background:linear-gradient(135deg,#1e2433,#1a1f2e);border:1px solid #2d3748;border-radius:14px;padding:20px;}
+.card-hd{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;}
+.card-title{font-size:13px;font-weight:700;color:#e2e8f0;}
+.card-sub{font-size:11px;color:#64748b;margin-top:3px;}
+.bdg{font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.bdg.blue{background:rgba(59,130,246,.15);color:#60a5fa;border:1px solid rgba(59,130,246,.3);}
+.bdg.green{background:rgba(16,185,129,.15);color:#34d399;border:1px solid rgba(16,185,129,.3);}
+.bdg.amber{background:rgba(245,158,11,.15);color:#fbbf24;border:1px solid rgba(245,158,11,.3);}
+.bdg.red{background:rgba(239,68,68,.15);color:#f87171;border:1px solid rgba(239,68,68,.3);}
+.bdg.purple{background:rgba(139,92,246,.15);color:#a78bfa;border:1px solid rgba(139,92,246,.3);}
+/* Progress */
+.prog-item{margin-bottom:13px;}
+.prog-row{display:flex;justify-content:space-between;margin-bottom:5px;}
+.prog-lbl{font-size:11px;color:#94a3b8;font-weight:500;}
+.prog-val{font-size:11px;color:#64748b;}
+.prog-track{height:7px;background:#2d3748;border-radius:10px;overflow:hidden;}
+.prog-fill{height:100%;border-radius:10px;transition:width .9s ease;}
+/* Timeline items */
+.tl-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #1e2433;}
+.tl-item:last-child{border-bottom:none;}
+.tl-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+.tl-title{font-size:12px;font-weight:600;color:#e2e8f0;}
+.tl-meta{font-size:10px;color:#64748b;margin-top:2px;}
+/* Bucket cards */
+.bkt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:20px;}
+.bkt-card{background:linear-gradient(135deg,#1e2433,#1a1f2e);border:1px solid #2d3748;border-radius:12px;padding:16px;}
+.bkt-name{font-size:11px;font-weight:700;color:#e2e8f0;margin-bottom:10px;display:flex;align-items:center;gap:7px;}
+.bkt-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.bkt-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:10px;}
+.bkt-stat{text-align:center;}
+.bkt-val{font-size:18px;font-weight:800;}
+.bkt-lbl{font-size:9px;color:#475569;text-transform:uppercase;letter-spacing:.5px;}
+.bkt-bar{height:5px;background:#2d3748;border-radius:3px;overflow:hidden;}
+.bkt-fill{height:100%;border-radius:3px;}
+.bkt-ft{display:flex;justify-content:space-between;margin-top:6px;font-size:10px;color:#475569;}
+/* Assignee list */
+.av-list{display:flex;flex-direction:column;gap:9px;}
+.av-item{display:flex;align-items:center;gap:11px;padding:9px 12px;background:rgba(255,255,255,.02);border-radius:8px;border:1px solid #2d3748;}
+.av-circle{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;}
+.av-info{flex:1;}
+.av-name{font-size:12px;font-weight:600;color:#e2e8f0;}
+.av-sub{font-size:10px;color:#64748b;}
+.av-bw{width:80px;}
+.av-bar{height:4px;background:#2d3748;border-radius:2px;overflow:hidden;margin-bottom:3px;}
+.av-fill{height:100%;border-radius:2px;}
+.av-pct{font-size:10px;color:#64748b;text-align:right;}
+/* Alert items */
+.al-item{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:8px;border-left:3px solid;margin-bottom:8px;}
+.al-ov{background:rgba(239,68,68,.06);border-left-color:#ef4444;}
+.al-sn{background:rgba(245,158,11,.06);border-left-color:#f59e0b;}
+.al-up{background:rgba(59,130,246,.06);border-left-color:#3b82f6;}
+.al-task{flex:1;}
+.al-name{font-size:12px;font-weight:600;color:#e2e8f0;}
+.al-meta{font-size:10px;color:#64748b;margin-top:2px;}
+.al-date{font-size:10px;font-weight:600;white-space:nowrap;}
+.al-ov .al-date{color:#f87171;}.al-sn .al-date{color:#fbbf24;}.al-up .al-date{color:#60a5fa;}
+/* Funnel */
+.funnel{display:flex;align-items:center;justify-content:center;gap:4px;flex-wrap:wrap;padding:16px 0;}
+.fn-blk{text-align:center;padding:20px 14px;border-radius:12px;border:2px solid;flex:1;max-width:190px;min-width:110px;}
+.fn-arr{font-size:20px;color:#2d3748;}
+.fn-val{font-size:36px;font-weight:800;line-height:1;}
+.fn-lbl{font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-top:6px;}
+.fn-pct{font-size:10px;margin-top:4px;opacity:.65;}
+/* Table */
+.flt-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;}
+.flt{background:#1e2433;border:1px solid #2d3748;color:#94a3b8;padding:7px 12px;border-radius:8px;font-size:12px;outline:none;font-family:inherit;transition:border-color .2s;}
+.flt:focus{border-color:#3b82f6;color:#e2e8f0;}
+.flt.srch{width:210px;}
+.flt::placeholder{color:#475569;}
+.tbl-wrap{overflow-x:auto;border-radius:10px;border:1px solid #2d3748;}
+table{width:100%;border-collapse:collapse;font-size:12px;}
+th{background:#1a1f2e;color:#64748b;padding:11px 14px;text-align:left;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.7px;border-bottom:1px solid #2d3748;white-space:nowrap;}
+td{padding:10px 14px;border-bottom:1px solid #1e2433;color:#cbd5e1;vertical-align:middle;}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:rgba(255,255,255,.02);}
+/* Pills */
+.spill{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:20px;font-size:10px;font-weight:700;white-space:nowrap;}
+.sc{background:rgba(16,185,129,.15);color:#34d399;border:1px solid rgba(16,185,129,.25);}
+.sp{background:rgba(59,130,246,.15);color:#60a5fa;border:1px solid rgba(59,130,246,.25);}
+.sn{background:rgba(100,116,139,.15);color:#94a3b8;border:1px solid rgba(100,116,139,.25);}
+.pu{background:rgba(239,68,68,.15);color:#f87171;}
+.pi{background:rgba(245,158,11,.15);color:#fbbf24;}
+.pm{background:rgba(59,130,246,.15);color:#60a5fa;}
+.pl{background:rgba(100,116,139,.15);color:#94a3b8;}
+.cl-wrap{display:flex;align-items:center;gap:6px;}
+.cl-bar{flex:1;height:4px;background:#2d3748;border-radius:2px;overflow:hidden;min-width:40px;}
+.cl-fill{height:100%;background:linear-gradient(90deg,#3b82f6,#10b981);border-radius:2px;}
+.cl-txt{font-size:10px;color:#64748b;white-space:nowrap;}
+/* Responsive */
+@media(max-width:1100px){.r3{grid-template-columns:1fr 1fr;}.r21,.r12{grid-template-columns:1fr;}}
+@media(max-width:780px){.r2,.r3{grid-template-columns:1fr;}.page{padding:14px 16px;}.kpi-grid{grid-template-columns:repeat(2,1fr);}.nav{padding:0 14px;}.header,.dbar{padding-left:16px;padding-right:16px;}}
+</style>
+</head>
+<body>
+
+<!-- Loading -->
+<div id="loadingOverlay">
+  <div class="spinner"></div>
+  <div class="load-txt" id="loadMsg">Loading task data...</div>
+</div>
+
+<!-- Error -->
+<div id="errPanel">
+  <div class="err-title">⚠️ Could not load data/tasks.csv</div>
+  <div class="err-body" id="errBody"></div>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <div class="hdr-left">
+    <div class="hdr-icon">🏭</div>
+    <div>
+      <div class="hdr-title">Warehouse Operations Dashboard</div>
+      <div class="hdr-sub">Wodgina Site — AMG · BENE · GAM Stores</div>
+    </div>
+  </div>
+  <div class="hdr-right">
+    <div class="hdr-meta" id="hdrMeta">Loading...</div>
+    <div class="live-badge warn" id="liveBadge">
+      <div class="live-dot"></div>
+      <span id="liveLabel">LOADING</span>
+    </div>
+  </div>
+</div>
+
+<!-- Data bar -->
+<div class="dbar">
+  <div class="dbar-item"><div class="ddot warn" id="dbDot"></div><span id="dbStatus">Fetching data...</span></div>
+  <div class="dbar-item" id="dbLoaded" style="display:none;">📅 <span id="dbTime"></span></div>
+  <div class="dbar-item" id="dbCount"  style="display:none;">📋 <span id="dbRows"></span></div>
+  <button class="rfr" onclick="boot()">🔄 Refresh Data</button>
+</div>
+
+<!-- Nav Tabs -->
+<div class="nav">
+  <div class="ntab active" onclick="goTab('overview')"  id="nt-overview">📊 Overview</div>
+  <div class="ntab"        onclick="goTab('status')"    id="nt-status">📋 Status</div>
+  <div class="ntab"        onclick="goTab('buckets')"   id="nt-buckets">🗂 Buckets</div>
+  <div class="ntab"        onclick="goTab('team')"      id="nt-team">👥 Team</div>
+  <div class="ntab"        onclick="goTab('timeline')"  id="nt-timeline">📅 Timeline</div>
+  <div class="ntab"        onclick="goTab('tasks')"     id="nt-tasks">📝 Tasks</div>
+</div>
+
+<!-- ═══════════════ OVERVIEW ═══════════════ -->
+<div class="page active" id="page-overview">
+  <div class="kpi-grid">
+    <div class="kpi blue">  <div class="kpi-lbl">Total Tasks</div>  <div class="kpi-val" id="kTotal">—</div>   <div class="kpi-sub">All tracked tasks</div>       <div class="kpi-ghost">📋</div></div>
+    <div class="kpi green"> <div class="kpi-lbl">Completed</div>    <div class="kpi-val" id="kDone">—</div>    <div class="kpi-sub" id="kDonePct">—</div>         <div class="kpi-ghost">✅</div></div>
+    <div class="kpi amber"> <div class="kpi-lbl">In Progress</div>  <div class="kpi-val" id="kProg">—</div>    <div class="kpi-sub" id="kProgPct">—</div>         <div class="kpi-ghost">🔄</div></div>
+    <div class="kpi red">   <div class="kpi-lbl">Not Started</div>  <div class="kpi-val" id="kNs">—</div>      <div class="kpi-sub" id="kNsPct">—</div>           <div class="kpi-ghost">⏸</div></div>
+    <div class="kpi purple"><div class="kpi-lbl">Overdue</div>      <div class="kpi-val" id="kOv">—</div>      <div class="kpi-sub">Past due date</div>           <div class="kpi-ghost">⚠️</div></div>
+    <div class="kpi cyan">  <div class="kpi-lbl">Buckets</div>      <div class="kpi-val" id="kBkt">—</div>     <div class="kpi-sub">Project categories</div>      <div class="kpi-ghost">🗂</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Team Members</div> <div class="kpi-val" id="kTeam">—</div>    <div class="kpi-sub">Unique assignees</div>        <div class="kpi-ghost">👥</div></div>
+    <div class="kpi pink">  <div class="kpi-lbl">Checklist Items</div><div class="kpi-val" id="kCl">—</div>   <div class="kpi-sub" id="kClPct">—% complete</div> <div class="kpi-ghost">☑️</div></div>
+  </div>
+
+  <div class="row r2">
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Task Status Distribution</div><div class="card-sub">Overall completion breakdown</div></div><span class="bdg green" id="bdgTotal">—</span></div>
+      <div style="height:270px;"><canvas id="cOvStatus"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Tasks by Bucket</div><div class="card-sub">Distribution across project categories</div></div><span class="bdg blue" id="bdgBkt">—</span></div>
+      <div style="height:270px;"><canvas id="cOvBucket"></canvas></div>
+    </div>
+  </div>
+
+  <div class="row r2">
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Priority Breakdown</div><div class="card-sub">Tasks by urgency level</div></div></div>
+      <div style="height:240px;"><canvas id="cOvPriority"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Timeline Labels</div><div class="card-sub">Tasks by delivery horizon</div></div></div>
+      <div style="height:240px;"><canvas id="cOvLabel"></canvas></div>
+    </div>
+  </div>
+
+  <div class="row r1">
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Task Creation & Completion Timeline</div><div class="card-sub">Cumulative tasks created vs completed over time</div></div><span class="bdg blue">2026</span></div>
+      <div style="height:210px;"><canvas id="cOvTimeline"></canvas></div>
+    </div>
+  </div>
+
+  <div class="row r21">
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Bucket Completion Rate</div><div class="card-sub">Tasks completed per project category</div></div></div>
+      <div id="bktProgBars"></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Recent Completions</div><div class="card-sub">Latest tasks marked done</div></div><span class="bdg green" id="bdgDone">—</span></div>
+      <div id="recentList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ STATUS ═══════════════ -->
+<div class="page" id="page-status">
+  <div class="row r3">
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Status by Bucket</div><div class="card-sub">Stacked completion view</div></div></div>
+      <div style="height:300px;"><canvas id="cStBucket"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Priority vs Status</div><div class="card-sub">Grouped comparison</div></div></div>
+      <div style="height:300px;"><canvas id="cStPri"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Completion Trend</div><div class="card-sub">Tasks completed per month</div></div></div>
+      <div style="height:300px;"><canvas id="cStTrend"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:18px;">
+    <div class="card-hd"><div><div class="card-title">Task Pipeline Funnel</div><div class="card-sub">Progression through stages</div></div></div>
+    <div class="funnel" id="fnArea"></div>
+  </div>
+
+  <div class="row r2">
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Checklist Progress</div><div class="card-sub">Completed vs remaining items per task</div></div><span class="bdg blue">Tasks with checklists</span></div>
+      <div style="height:300px;"><canvas id="cStCl"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Open Task Age</div><div class="card-sub">Days since task was created</div></div></div>
+      <div style="height:300px;"><canvas id="cStAge"></canvas></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ BUCKETS ═══════════════ -->
+<div class="page" id="page-buckets">
+  <div class="bkt-grid" id="bktCards"></div>
+  <div class="row r2">
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Bucket Completion Comparison</div><div class="card-sub">% complete per project category</div></div></div>
+      <div style="height:300px;"><canvas id="cBktCmp"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Priority Mix by Bucket</div><div class="card-sub">Priority distribution per category</div></div></div>
+      <div style="height:300px;"><canvas id="cBktPri"></canvas></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ TEAM ═══════════════ -->
+<div class="page" id="page-team">
+  <div class="kpi-grid" id="teamKpis" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));"></div>
+  <div class="row r2">
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Assignment Distribution</div><div class="card-sub">Tasks per team member</div></div></div>
+      <div style="height:300px;"><canvas id="cTmAssign"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Completions by Person</div><div class="card-sub">Who closed tasks</div></div></div>
+      <div style="height:300px;"><canvas id="cTmDone"></canvas></div>
+    </div>
+  </div>
+  <div class="row r2">
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Team Workload Detail</div><div class="card-sub">Status breakdown per person</div></div></div>
+      <div class="av-list" id="avList"></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Tasks Created By</div><div class="card-sub">Task creation ownership</div></div></div>
+      <div style="height:300px;"><canvas id="cTmCreated"></canvas></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ TIMELINE ═══════════════ -->
+<div class="page" id="page-timeline">
+  <div class="row r2">
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Tasks Due by Month</div><div class="card-sub">Upcoming workload distribution</div></div></div>
+      <div style="height:260px;"><canvas id="cTlDue"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Delivery Horizon</div><div class="card-sub">Near / mid / long term split</div></div></div>
+      <div style="height:260px;"><canvas id="cTlHorizon"></canvas></div>
+    </div>
+  </div>
+  <div class="card" style="margin-bottom:18px;">
+    <div class="card-hd">
+      <div><div class="card-title">🚨 Attention Required</div><div class="card-sub">Overdue and due within 60 days</div></div>
+      <span class="bdg red" id="bdgAlerts">—</span>
+    </div>
+    <div id="alertList"></div>
+  </div>
+  <div class="card">
+    <div class="card-hd"><div><div class="card-title">Completion Velocity</div><div class="card-sub">Monthly completions and running cumulative total</div></div></div>
+    <div style="height:220px;"><canvas id="cTlVel"></canvas></div>
+  </div>
+</div>
+
+<!-- ═══════════════ TASKS ═══════════════ -->
+<div class="page" id="page-tasks">
+  <div class="flt-bar">
+    <select class="flt" id="fStatus" onchange="applyFilters()">
+      <option value="">All Status</option>
+      <option>Completed</option><option>In progress</option><option>Not started</option>
+    </select>
+    <select class="flt" id="fBucket" onchange="applyFilters()"><option value="">All Buckets</option></select>
+    <select class="flt" id="fPriority" onchange="applyFilters()">
+      <option value="">All Priority</option>
+      <option>Urgent</option><option>Important</option><option>Medium</option><option>Low</option>
+    </select>
+    <select class="flt" id="fLabel" onchange="applyFilters()"><option value="">All Labels</option></select>
+    <input class="flt srch" type="text" id="fSearch" placeholder="🔍 Search tasks..." oninput="applyFilters()">
+    <span id="tblCount" style="font-size:11px;color:#64748b;margin-left:auto;"></span>
+  </div>
+  <div class="card" style="padding:0;">
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr>
+          <th>Task Name</th><th>Bucket</th><th>Status</th><th>Priority</th>
+          <th>Label</th><th>Due Date</th><th>Assigned To</th><th>Checklist</th><th>Completed</th>
+        </tr></thead>
+        <tbody id="tblBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+// ═══════════════════════════════════════════
+//  CONFIG — bucket colours match your data
+// ═══════════════════════════════════════════
+const CSV_PATH = 'data/tasks.csv';
+
+const BKT_COL = {
+  'To do':                     '#64748b',
+  'Projects BENE':             '#10b981',
+  'Projects AMG':              '#3b82f6',
+  'NPI Maintenance Requests':  '#f59e0b',
+  'Purchasing':                '#8b5cf6',
+  'Assets':                    '#f97316',
+  'Scheduled Activities':      '#06b6d4',
+  'Capital':                   '#ec4899'
+};
+
+const PAL = [
+  '#3b82f6','#10b981','#8b5cf6','#f59e0b','#f97316',
+  '#06b6d4','#ec4899','#84cc16','#ef4444','#6366f1',
+  '#14b8a6','#f43f5e','#a78bfa','#34d399','#fbbf24',
+  '#60a5fa','#fb923c','#22d3ee'
+];
+
+let TASKS = [];
+const CHS = {};
+
+// ═══════════════════════════════════════════
+//  BOOT
+// ═══════════════════════════════════════════
+async function boot() {
+  setLive('warn','LOADING');
+  showLoad('Fetching latest data...');
+  try {
+    const r = await fetch(CSV_PATH + '?v=' + Date.now());
+    if (!r.ok) throw new Error(`HTTP ${r.status} — ${CSV_PATH} not found. Check the file exists in your data/ folder.`);
+    const txt = await r.text();
+    const raw = parseCSV(txt);
+    if (!raw.length) throw new Error('CSV file appears empty or has no data rows.');
+    TASKS = raw.map(mapRow).filter(t => t.name.trim() !== '');
+    if (!TASKS.length) throw new Error('No valid task rows found. Check column headers match expected names.');
+    hideLoad();
+    renderAll();
+    const now = new Date().toLocaleString('en-AU',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+    el('dbTime').textContent = 'Loaded: ' + now;
+    el('dbRows').textContent = TASKS.length + ' tasks';
+    el('dbLoaded').style.display = 'flex';
+    el('dbCount').style.display  = 'flex';
+    el('hdrMeta').innerHTML = `<div style="color:#94a3b8;">${CSV_PATH}</div><div style="color:#e2e8f0;font-weight:600;">${TASKS.length} tasks · ${now}</div>`;
+    setLive('ok','LIVE');
+    el('errPanel').classList.remove('show');
+  } catch(e) {
+    hideLoad();
+    setLive('err','ERROR');
+    showErr(e.message);
+    console.error('Dashboard boot error:', e);
+  }
+}
+
+// ═══════════════════════════════════════════
+//  CSV PARSER
+// ═══════════════════════════════════════════
+function parseCSV(txt) {
+  const lines = txt.replace(/\r\n/g,'\n').replace(/\r/g,'\n').trim().split('\n');
+  if (lines.length < 2) return [];
+  function parseLine(line) {
+    const f=[]; let fd='', iq=false;
+    for (let i=0;i<line.length;i++) {
+      const c=line[i];
+      if (c==='"'){ if(iq&&line[i+1]==='"'){fd+='"';i++;}else iq=!iq; }
+      else if (c===','&&!iq){ f.push(fd);fd=''; }
+      else fd+=c;
+    }
+    f.push(fd); return f;
+  }
+  const hdrs = parseLine(lines[0]).map(h=>h.trim().replace(/^"|"$/g,''));
+  return lines.slice(1).filter(l=>l.trim()).map(line=>{
+    const v=parseLine(line);
+    const o={};
+    hdrs.forEach((h,i)=>{ o[h]=(v[i]||'').trim().replace(/^"|"$/g,''); });
+    return o;
+  }).filter(r=>Object.values(r).some(v=>v!==''));
+}
+
+// ═══════════════════════════════════════════
+//  ROW MAPPER
+// ═══════════════════════════════════════════
+function mapRow(r) {
+  function g(keys) {
+    for (const k of keys) {
+      const f=Object.keys(r).find(h=>h.toLowerCase().trim()===k.toLowerCase());
+      if (f&&r[f]!==undefined) return r[f];
+    }
+    return '';
+  }
+  return {
+    name:        g(['task name','name','title','task']).trim(),
+    bucket:      g(['bucket','category','group','section']).trim() || 'Uncategorised',
+    status:      normStatus(g(['status','state','completion status'])),
+    priority:    normPriority(g(['priority','urgency'])),
+    label:       g(['labels','label','timeframe','horizon']).trim(),
+    due:         g(['due date','due','deadline','end date']).trim(),
+    start:       g(['start date','start']).trim(),
+    assigned:    g(['assigned to','assignee','owner']).trim(),
+    createdBy:   g(['created by','creator','author']).trim(),
+    createdDate: g(['created date','created','creation date']).trim(),
+    completed:   g(['completed date','completion date','date completed']).trim(),
+    completedBy: g(['completed by','done by','finished by']).trim(),
+    checklist:   g(['completed checklist items','checklist items','checklist']).trim()
+  };
+}
+
+function normStatus(s) {
+  s=String(s).toLowerCase().trim();
+  if(s.includes('complet')||s==='done'||s==='closed'||s==='yes') return 'Completed';
+  if(s.includes('progress')||s==='active'||s==='open'||s==='wip'||s==='started') return 'In progress';
+  return 'Not started';
+}
+function normPriority(s) {
+  s=String(s).toLowerCase().trim();
+  if(s==='urgent'||s==='critical'||s==='p1') return 'Urgent';
+  if(s==='important'||s==='high'||s==='p2')  return 'Important';
+  if(s==='low'||s==='minor'||s==='p4')        return 'Low';
+  return 'Medium';
+}
+
+// ═══════════════════════════════════════════
+//  RENDER ALL
+// ═══════════════════════════════════════════
+function renderAll() {
+  const today = new Date().toISOString().split('T')[0];
+  const total  = TASKS.length;
+  const done   = TASKS.filter(t=>t.status==='Completed').length;
+  const prog   = TASKS.filter(t=>t.status==='In progress').length;
+  const ns     = TASKS.filter(t=>t.status==='Not started').length;
+  const ov     = TASKS.filter(t=>t.due&&t.due<today&&t.status!=='Completed').length;
+  const bkts   = [...new Set(TASKS.map(t=>t.bucket))];
+  const pct    = total>0?((done/total)*100).toFixed(1):0;
+
+  // Checklist totals
+  let clDone=0, clTotal=0;
+  TASKS.forEach(t=>{
+    if(t.checklist&&t.checklist.includes('/')){
+      const[d,tot]=t.checklist.split('/').map(Number);
+      clDone+=(d||0); clTotal+=(tot||0);
+    }
+  });
+
+  // Unique team members
+  const teamSet = new Set();
+  TASKS.forEach(t=>{ if(t.assigned) t.assigned.split(';').forEach(a=>{ if(a.trim()) teamSet.add(a.trim()); }); });
+
+  // KPI cards
+  anim('kTotal', total);
+  anim('kDone',  done);
+  anim('kProg',  prog);
+  anim('kNs',    ns);
+  anim('kOv',    ov);
+  anim('kBkt',   bkts.length);
+  anim('kTeam',  teamSet.size);
+  anim('kCl',    clTotal);
+
+  setText('kDonePct',  pct + '% completion rate');
+  setText('kProgPct',  (total>0?((prog/total)*100).toFixed(1):0) + '% of all tasks');
+  setText('kNsPct',    (total>0?((ns/total)*100).toFixed(1):0)   + '% backlog');
+  setText('kClPct',    clTotal>0?Math.round(clDone/clTotal*100)+'% complete':'—% complete');
+  setText('bdgTotal',  total + ' tasks');
+  setText('bdgBkt',    bkts.length + ' buckets');
+  setText('bdgDone',   done + ' total');
+
+  doOverview(bkts, total, done, prog, ns, today);
+  doStatus(bkts, total, done, prog, ns, pct, today);
+  doBuckets(bkts);
+  doTeam();
+  doTimeline(today);
+  buildFilters(bkts);
+  applyFilters();
+}
+
+// ═══════════════════════════════════════════
+//  OVERVIEW
+// ═══════════════════════════════════════════
+function doOverview(bkts, total, done, prog, ns, today) {
+  const pct = total>0?((done/total)*100).toFixed(1):0;
+
+  // Status doughnut
+  mk('cOvStatus','doughnut',{
+    labels:['Completed','In Progress','Not Started'],
+    datasets:[{data:[done,prog,ns],
+      backgroundColor:['rgba(16,185,129,.85)','rgba(59,130,246,.85)','rgba(100,116,139,.5)'],
+      borderColor:['#059669','#1d4ed8','#334155'],borderWidth:2,hoverOffset:6}]
+  },{cutout:'65%',plugins:{
+    legend:{position:'bottom',labels:{padding:14,usePointStyle:true,pointStyle:'circle',font:{size:11}}},
+    tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${ctx.raw} (${total>0?((ctx.raw/total)*100).toFixed(1):0}%)`}}
+  }});
+
+  // Bucket bar horizontal
+  const bCounts = bkts.map(b=>TASKS.filter(t=>t.bucket===b).length);
+  const bCols   = bkts.map(b=>bktCol(b));
+  mk('cOvBucket','bar',{
+    labels:bkts.map(b=>b.length>24?b.substring(0,24)+'…':b),
+    datasets:[{label:'Tasks',data:bCounts,
+      backgroundColor:bCols.map(c=>c+'44'),borderColor:bCols,
+      borderWidth:2,borderRadius:6,borderSkipped:false}]
+  },{indexAxis:'y',plugins:{legend:{display:false}},
+    scales:{x:{grid:{color:'#1e2433'},beginAtZero:true,ticks:{stepSize:2}},
+            y:{grid:{display:false},ticks:{font:{size:10}}}}});
+
+  // Priority bar
+  const pris=['Urgent','Important','Medium','Low'];
+  mk('cOvPriority','bar',{
+    labels:pris,
+    datasets:[{label:'Tasks',data:pris.map(p=>TASKS.filter(t=>t.priority===p).length),
+      backgroundColor:['rgba(239,68,68,.7)','rgba(245,158,11,.7)','rgba(59,130,246,.7)','rgba(100,116,139,.5)'],
+      borderColor:['#ef4444','#f59e0b','#3b82f6','#64748b'],
+      borderWidth:2,borderRadius:6,borderSkipped:false}]
+  },{plugins:{legend:{display:false}},
+    scales:{y:{grid:{color:'#1e2433'},beginAtZero:true},x:{grid:{display:false}}}});
+
+  // Label pie
+  const lblMap={};
+  TASKS.forEach(t=>{ if(t.label) lblMap[t.label.trim()]=(lblMap[t.label.trim()]||0)+1; });
+  const lblN=Object.keys(lblMap), lblC=Object.values(lblMap);
+  if(lblN.length) {
+    mk('cOvLabel','pie',{
+      labels:lblN,
+      datasets:[{data:lblC,
+        backgroundColor:lblN.map((_,i)=>PAL[i%PAL.length]+'bb'),
+        borderColor:lblN.map((_,i)=>PAL[i%PAL.length]),
+        borderWidth:2,hoverOffset:6}]
+    },{plugins:{legend:{position:'bottom',labels:{padding:12,usePointStyle:true,pointStyle:'circle',font:{size:11}}}}});
+  }
+
+  // Creation line
+  const crMap={}, coMap={};
+  TASKS.forEach(t=>{
+    if(t.createdDate){ const m=t.createdDate.substring(0,7); crMap[m]=(crMap[m]||0)+1; }
+    if(t.completed)  { const m=t.completed.substring(0,7);   coMap[m]=(coMap[m]||0)+1; }
+  });
+  const allM=[...new Set([...Object.keys(crMap),...Object.keys(coMap)])].sort();
+  let cc=0,co=0;
+  const cumCr=allM.map(m=>{cc+=(crMap[m]||0);return cc;});
+  const cumCo=allM.map(m=>{co+=(coMap[m]||0);return co;});
+  mk('cOvTimeline','line',{
+    labels:allM.map(fmtM),
+    datasets:[
+      {label:'Created (Cumulative)',data:cumCr,borderColor:'#3b82f6',backgroundColor:'rgba(59,130,246,.1)',borderWidth:2.5,fill:true,tension:.4,pointBackgroundColor:'#3b82f6',pointRadius:4},
+      {label:'Completed (Cumulative)',data:cumCo,borderColor:'#10b981',backgroundColor:'rgba(16,185,129,.1)',borderWidth:2.5,fill:true,tension:.4,pointBackgroundColor:'#10b981',pointRadius:4}
+    ]
+  },{plugins:{legend:{labels:{usePointStyle:true,pointStyle:'circle'}}},
+    scales:{y:{grid:{color:'#1e2433'},beginAtZero:true},x:{grid:{color:'#1e2433'},ticks:{font:{size:10}}}}});
+
+  // Bucket progress bars
+  el('bktProgBars').innerHTML = bkts.map((b,i)=>{
+    const bT=TASKS.filter(t=>t.bucket===b).length;
+    const bD=TASKS.filter(t=>t.bucket===b&&t.status==='Completed').length;
+    const bp=bT>0?Math.round(bD/bT*100):0;
+    const c=bktCol(b);
+    return `<div class="prog-item">
+      <div class="prog-row">
+        <span class="prog-lbl">${esc(b.length>34?b.substring(0,34)+'…':b)}</span>
+        <span class="prog-val">${bD}/${bT} — ${bp}%</span>
+      </div>
+      <div class="prog-track"><div class="prog-fill" style="width:${bp}%;background:${c};"></div></div>
+    </div>`;
+  }).join('');
+
+  // Recent completions
+  const recent=[...TASKS].filter(t=>t.completed).sort((a,b)=>b.completed.localeCompare(a.completed)).slice(0,8);
+  el('recentList').innerHTML = recent.length
+    ? recent.map(t=>`<div class="tl-item">
+        <div class="tl-dot" style="background:${bktCol(t.bucket)};"></div>
+        <div>
+          <div class="tl-title">${esc(t.name)}</div>
+          <div class="tl-meta">${t.completed}${t.completedBy?' · '+esc(t.completedBy):''} · ${esc(t.bucket)}</div>
+        </div>
+      </div>`).join('')
+    : '<div style="color:#475569;font-size:12px;padding:12px;">No completed tasks yet</div>';
+}
+
+// ═══════════════════════════════════════════
+//  STATUS
+// ═══════════════════════════════════════════
+function doStatus(bkts, total, done, prog, ns, pct, today) {
+  const bLbl=bkts.map(b=>b.length>14?b.substring(0,14)+'…':b);
+  const pris=['Urgent','Important','Medium','Low'];
+
+  // Stacked bucket status
+  mk('cStBucket','bar',{labels:bLbl,datasets:[
+    {label:'Completed', data:bkts.map(b=>TASKS.filter(t=>t.bucket===b&&t.status==='Completed').length),  backgroundColor:'rgba(16,185,129,.85)',borderRadius:3},
+    {label:'In Progress',data:bkts.map(b=>TASKS.filter(t=>t.bucket===b&&t.status==='In progress').length),backgroundColor:'rgba(59,130,246,.85)',borderRadius:3},
+    {label:'Not Started',data:bkts.map(b=>TASKS.filter(t=>t.bucket===b&&t.status==='Not started').length),backgroundColor:'rgba(100,116,139,.5)',borderRadius:3}
+  ]},{plugins:{legend:{labels:{usePointStyle:true,pointStyle:'circle',font:{size:11}}}},
+    scales:{x:{stacked:true,grid:{display:false},ticks:{font:{size:9}}},y:{stacked:true,grid:{color:'#1e2433'}}}});
+
+  // Priority vs status
+  mk('cStPri','bar',{labels:pris,datasets:[
+    {label:'Completed', data:pris.map(p=>TASKS.filter(t=>t.priority===p&&t.status==='Completed').length),  backgroundColor:'rgba(16,185,129,.85)',borderRadius:4},
+    {label:'In Progress',data:pris.map(p=>TASKS.filter(t=>t.priority===p&&t.status==='In progress').length),backgroundColor:'rgba(59,130,246,.85)',borderRadius:4},
+    {label:'Not Started',data:pris.map(p=>TASKS.filter(t=>t.priority===p&&t.status==='Not started').length),backgroundColor:'rgba(100,116,139,.5)',borderRadius:4}
+  ]},{plugins:{legend:{labels:{usePointStyle:true,pointStyle:'circle',font:{size:11}}}},
+    scales:{x:{grid:{display:false}},y:{grid:{color:'#1e2433'},beginAtZero:true}}});
+
+  // Completion trend
+  const coMap={};
+  TASKS.filter(t=>t.completed).forEach(t=>{ const m=t.completed.substring(0,7); coMap[m]=(coMap[m]||0)+1; });
+  const coM=Object.keys(coMap).sort();
+  mk('cStTrend','bar',{
+    labels:coM.map(fmtM),
+    datasets:[{label:'Completed',data:coM.map(m=>coMap[m]),
+      backgroundColor:'rgba(16,185,129,.75)',borderColor:'#10b981',
+      borderWidth:2,borderRadius:6,borderSkipped:false}]
+  },{plugins:{legend:{display:false}},
+    scales:{y:{grid:{color:'#1e2433'},beginAtZero:true},x:{grid:{display:false},ticks:{font:{size:10}}}}});
+
+  // Funnel
+  const fn=[
+    {val:total,lbl:'All Tasks',  rgb:'100,116,139',p:''},
+    {val:prog, lbl:'In Progress',rgb:'59,130,246',  p:total>0?((prog/total)*100).toFixed(1)+'%':''},
+    {val:ns,   lbl:'Not Started',rgb:'245,158,11',  p:total>0?((ns/total)*100).toFixed(1)+'%':''},
+    {val:done, lbl:'Completed',  rgb:'16,185,129',  p:pct+'%'}
+  ];
+  el('fnArea').innerHTML = fn.map((f,i,a)=>`
+    <div class="fn-blk" style="border-color:rgba(${f.rgb},.4);background:rgba(${f.rgb},.12);">
+      <div class="fn-val" style="color:rgb(${f.rgb});">${f.val}</div>
+      <div class="fn-lbl" style="color:rgb(${f.rgb});">${f.lbl}</div>
+      ${f.p?`<div class="fn-pct">${f.p}</div>`:''}
+    </div>
+    ${i<a.length-1?'<div class="fn-arr">→</div>':''}`).join('');
+
+  // Checklist chart
+  const clT=TASKS.filter(t=>t.checklist&&t.checklist.includes('/'));
+  if(clT.length) {
+    mk('cStCl','bar',{
+      labels:clT.map(t=>t.name.length>26?t.name.substring(0,26)+'…':t.name),
+      datasets:[
+        {label:'Done',     data:clT.map(t=>parseInt(t.checklist.split('/')[0])||0),backgroundColor:'rgba(16,185,129,.85)',borderRadius:4},
+        {label:'Remaining',data:clT.map(t=>{const[d,tot]=t.checklist.split('/').map(Number);return(tot||0)-(d||0);}),backgroundColor:'rgba(59,130,246,.3)',borderRadius:4}
+      ]
+    },{indexAxis:'y',plugins:{legend:{labels:{usePointStyle:true,pointStyle:'circle',font:{size:11}}}},
+      scales:{x:{stacked:true,grid:{color:'#1e2433'}},y:{stacked:true,grid:{display:false},ticks:{font:{size:9}}}}});
+  }
+
+  // Open task age
+  const ageB={'< 30 days':0,'30–60 days':0,'60–90 days':0,'90+ days':0};
+  const now=new Date();
+  TASKS.filter(t=>t.status!=='Completed'&&t.createdDate).forEach(t=>{
+    const d=Math.ceil((now-new Date(t.createdDate))/(1000*60*60*24));
+    if(d<30) ageB['< 30 days']++;
+    else if(d<60) ageB['30–60 days']++;
+    else if(d<90) ageB['60–90 days']++;
+    else ageB['90+ days']++;
+  });
+  mk('cStAge','bar',{
+    labels:Object.keys(ageB),
+    datasets:[{label:'Open Tasks',data:Object.values(ageB),
+      backgroundColor:['rgba(16,185,129,.7)','rgba(245,158,11,.7)','rgba(239,68,68,.55)','rgba(239,68,68,.85)'],
+      borderColor:['#10b981','#f59e0b','#ef4444','#dc2626'],
+      borderWidth:2,borderRadius:6,borderSkipped:false}]
+  },{plugins:{legend:{display:false}},
+    scales:{y:{grid:{color:'#1e2433'},beginAtZero:true},x:{grid:{display:false}}}});
+}
+
+// ═══════════════════════════════════════════
+//  BUCKETS
+// ═══════════════════════════════════════════
+function doBuckets(bkts) {
+  el('bktCards').innerHTML = bkts.map((b,i)=>{
+    const bT=TASKS.filter(t=>t.bucket===b).length;
+    const bD=TASKS.filter(t=>t.bucket===b&&t.status==='Completed').length;
+    const bP=TASKS.filter(t=>t.bucket===b&&t.status==='In progress').length;
+    const bN=TASKS.filter(t=>t.bucket===b&&t.status==='Not started').length;
+    const bp=bT>0?Math.round(bD/bT*100):0;
+    const c=bktCol(b);
+    return `<div class="bkt-card">
+      <div class="bkt-name"><div class="bkt-dot" style="background:${c};"></div>${esc(b)}</div>
+      <div class="bkt-stats">
+        <div class="bkt-stat"><div class="bkt-val" style="color:#34d399;">${bD}</div><div class="bkt-lbl">Done</div></div>
+        <div class="bkt-stat"><div class="bkt-val" style="color:#60a5fa;">${bP}</div><div class="bkt-lbl">Active</div></div>
+        <div class="bkt-stat"><div class="bkt-val" style="color:#94a3b8;">${bN}</div><div class="bkt-lbl">Pending</div></div>
+      </div>
+      <div class="bkt-bar"><div class="bkt-fill" style="width:${bp}%;background:${c};"></div></div>
+      <div class="bkt-ft"><span>${bT} total tasks</span><span>${bp}% complete</span></div>
+    </div>`;
+  }).join('');
+
+  const bLbl=bkts.map(b=>b.length>14?b.substring(0,14)+'…':b);
+  mk('cBktCmp','bar',{labels:bLbl,datasets:[
+    {label:'% Completed',  data:bkts.map(b=>{const t=TASKS.filter(x=>x.bucket===b).length;return t>0?Math.round(TASKS.filter(x=>x.bucket===b&&x.status==='Completed').length/t*100):0;}),  backgroundColor:'rgba(16,185,129,.85)',borderRadius:4},
+    {label:'% In Progress',data:bkts.map(b=>{const t=TASKS.filter(x=>x.bucket===b).length;return t>0?Math.round(TASKS.filter(x=>x.bucket===b&&x.status==='In progress').length/t*100):0;}),backgroundColor:'rgba(59,130,246,.75)',borderRadius:4},
+    {label:'% Not Started',data:bkts.map(b=>{const t=TASKS.filter(x=>x.bucket===b).length;return t>0?Math.round(TASKS.filter(x=>x.bucket===b&&x.status==='Not started').length/t*100):0;}),backgroundColor:'rgba(100,116,139,.5)',borderRadius:4}
+  ]},{plugins:{legend:{labels:{usePointStyle:true,pointStyle:'circle',font:{size:11}}}},
+    scales:{x:{grid:{display:false},ticks:{font:{size:9}}},y:{grid:{color:'#1e2433'},beginAtZero:true,max:100,ticks:{callback:v=>v+'%'}}}});
+
+  const pris=['Urgent','Important','Medium','Low'];
+  mk('cBktPri','bar',{labels:bLbl,datasets:pris.map((p,i)=>({
+    label:p,
+    data:bkts.map(b=>TASKS.filter(t=>t.bucket===b&&t.priority===p).length),
+    backgroundColor:['rgba(239,68,68,.8)','rgba(245,158,11,.8)','rgba(59,130,246,.8)','rgba(100,116,139,.5)'][i],
+    borderRadius:3
+  }))},{plugins:{legend:{labels:{usePointStyle:true,pointStyle:'circle',font:{size:11}}}},
+    scales:{x:{stacked:true,grid:{display:false},ticks:{font:{size:9}}},y:{stacked:true,grid:{color:'#1e2433'}}}});
+}
+
+// ═══════════════════════════════════════════
+//  TEAM
+// ═══════════════════════════════════════════
+function doTeam() {
+  // Build assignee map
+  const aMap={};
+  TASKS.forEach(t=>{
+    if(!t.assigned) return;
+    t.assigned.split(';').forEach(a=>{
+      const n=a.trim(); if(!n) return;
+      if(!aMap[n]) aMap[n]={total:0,done:0,prog:0,ns:0};
+      aMap[n].total++;
+      if(t.status==='Completed')   aMap[n].done++;
+      if(t.status==='In progress') aMap[n].prog++;
+      if(t.status==='Not started') aMap[n].ns++;
+    });
+  });
+  const assignees=Object.entries(aMap)
+    .map(([n,v])=>({name:n,...v,pct:v.total>0?Math.round(v.done/v.total*100):0}))
+    .sort((a,b)=>b.total-a.total);
+
+  // Team KPI cards
+  const tcols=['blue','green','purple','amber','cyan','orange','red','pink'];
+  el('teamKpis').innerHTML = assignees.slice(0,8).map((a,i)=>`
+    <div class="kpi ${tcols[i%tcols.length]}">
+      <div class="kpi-lbl">${esc(a.name)}</div>
+      <div class="kpi-val" style="font-size:26px;">${a.total}</div>
+      <div class="kpi-sub">${a.done} done · ${a.pct}%</div>
+      <div class="kpi-ghost" style="font-size:22px;">👤</div>
+    </div>`).join('');
+
+  // Assignment doughnut
+  mk('cTmAssign','doughnut',{
+    labels:assignees.map(a=>a.name),
+    datasets:[{data:assignees.map(a=>a.total),
+      backgroundColor:assignees.map((_,i)=>PAL[i%PAL.length]+'cc'),
+      borderColor:assignees.map((_,i)=>PAL[i%PAL.length]),
+      borderWidth:2,hoverOffset:6}]
+  },{cutout:'50%',plugins:{legend:{position:'right',labels:{padding:10,usePointStyle:true,pointStyle:'circle',font:{size:10}}}}});
+
+  // Completed by bar
+  const dbMap={};
+  TASKS.filter(t=>t.completedBy).forEach(t=>{ const n=t.completedBy.trim(); if(n) dbMap[n]=(dbMap[n]||0)+1; });
+  const dbNames=Object.keys(dbMap).sort((a,b)=>dbMap[b]-dbMap[a]);
+  mk('cTmDone','bar',{
+    labels:dbNames,
+    datasets:[{label:'Tasks Completed',data:dbNames.map(n=>dbMap[n]),
+      backgroundColor:dbNames.map((_,i)=>PAL[i%PAL.length]+'cc'),
+      borderColor:dbNames.map((_,i)=>PAL[i%PAL.length]),
+      borderWidth:2,borderRadius:8,borderSkipped:false}]
+  },{plugins:{legend:{display:false}},
+    scales:{y:{grid:{color:'#1e2433'},beginAtZero:true},x:{grid:{display:false},ticks:{font:{size:10}}}}});
+
+  // Workload detail list
+  el('avList').innerHTML = assignees.map((a,i)=>{
+    const ini=a.name.split(' ').map(w=>w[0]).join('').substring(0,2).toUpperCase();
+    const c=PAL[i%PAL.length];
+    return `<div class="av-item">
+      <div class="av-circle" style="background:${c}22;color:${c};">${ini}</div>
+      <div class="av-info">
+        <div class="av-name">${esc(a.name)}</div>
+        <div class="av-sub">${a.total} assigned · ${a.done} done · ${a.prog} active · ${a.ns} pending</div>
+      </div>
+      <div class="av-bw">
+        <div class="av-bar"><div class="av-fill" style="width:${a.pct}%;background:${c};"></div></div>
+        <div class="av-pct">${a.pct}% done</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Created by pie
+  const cMap={};
+  TASKS.forEach(t=>{ if(t.createdBy){ const n=t.createdBy.trim(); if(n) cMap[n]=(cMap[n]||0)+1; } });
+  const cNames=Object.keys(cMap).sort((a,b)=>cMap[b]-cMap[a]);
+  mk('cTmCreated','pie',{
+    labels:cNames,
+    datasets:[{data:cNames.map(n=>cMap[n]),
+      backgroundColor:cNames.map((_,i)=>PAL[i%PAL.length]+'bb'),
+      borderColor:cNames.map((_,i)=>PAL[i%PAL.length]),
+      borderWidth:2,hoverOffset:6}]
+  },{plugins:{legend:{position:'bottom',labels:{padding:12,usePointStyle:true,pointStyle:'circle',font:{size:11}}}}});
+}
+
+// ═══════════════════════════════════════════
+//  TIMELINE
+// ═══════════════════════════════════════════
+function doTimeline(today) {
+  // Due by month
+  const dMap={};
+  TASKS.forEach(t=>{ if(t.due){ const m=t.due.substring(0,7); dMap[m]=(dMap[m]||0)+1; } });
+  const dM=Object.keys(dMap).sort();
+  mk('cTlDue','bar',{
+    labels:dM.map(fmtM),
+    datasets:[{label:'Tasks Due',data:dM.map(m=>dMap[m]),
+      backgroundColor:dM.map((_,i)=>PAL[i%PAL.length]+'99'),
+      borderColor:dM.map((_,i)=>PAL[i%PAL.length]),
+      borderWidth:2,borderRadius:6,borderSkipped:false}]
+  },{plugins:{legend:{display:false}},
+    scales:{y:{grid:{color:'#1e2433'},beginAtZero:true},x:{grid:{display:false},ticks:{font:{size:10}}}}});
+
+  // Horizon doughnut
+  const lblMap={};
+  TASKS.forEach(t=>{ if(t.label&&t.label.trim()) lblMap[t.label.trim()]=(lblMap[t.label.trim()]||0)+1; });
+  const lN=Object.keys(lblMap), lC=Object.values(lblMap);
+  if(lN.length) {
+    mk('cTlHorizon','doughnut',{
+      labels:lN,
+      datasets:[{data:lC,
+        backgroundColor:lN.map((_,i)=>PAL[i%PAL.length]+'bb'),
+        borderColor:lN.map((_,i)=>PAL[i%PAL.length]),
+        borderWidth:2,hoverOffset:6}]
+    },{cutout:'58%',plugins:{legend:{position:'bottom',labels:{padding:11,usePointStyle:true,pointStyle:'circle',font:{size:11}}}}});
+  }
+
+  // Alerts
+  const alerts=TASKS
+    .filter(t=>t.due&&t.status!=='Completed')
+    .map(t=>({...t,days:Math.ceil((new Date(t.due)-new Date(today))/(1000*60*60*24))}))
+    .sort((a,b)=>a.days-b.days)
+    .filter(t=>t.days<=60);
+
+  setText('bdgAlerts', alerts.filter(t=>t.days<=0).length + ' overdue');
+  el('alertList').innerHTML = alerts.length
+    ? alerts.map(t=>{
+        const cls =t.days<=0?'al-ov':t.days<=14?'al-sn':'al-up';
+        const icon=t.days<=0?'🔴':t.days<=14?'🟡':'🔵';
+        const lbl =t.days<=0?`OVERDUE by ${Math.abs(t.days)} days`:`Due in ${t.days} days`;
+        return `<div class="al-item ${cls}">
+          <span>${icon}</span>
+          <div class="al-task">
+            <div class="al-name">${esc(t.name)}</div>
+            <div class="al-meta">${esc(t.bucket)} · ${esc(t.priority)} · ${esc(t.assigned||'—')}</div>
+          </div>
+          <div class="al-date">Due ${t.due}<br>${lbl}</div>
+        </div>`;
+      }).join('')
+    : '<div style="color:#475569;font-size:12px;padding:16px;">No tasks due within 60 days 🎉</div>';
+
+  // Velocity
+  const coMap={};
+  TASKS.filter(t=>t.completed).forEach(t=>{ const m=t.completed.substring(0,7); coMap[m]=(coMap[m]||0)+1; });
+  const vM=Object.keys(coMap).sort();
+  let vc=0;
+  const cumV=vM.map(m=>{ vc+=(coMap[m]||0); return vc; });
+  mk('cTlVel',null,{
+    labels:vM.map(fmtM),
+    datasets:[
+      {type:'bar', label:'Monthly',   data:vM.map(m=>coMap[m]),backgroundColor:'rgba(245,158,11,.65)',borderColor:'#f59e0b',borderWidth:2,borderRadius:4,borderSkipped:false},
+      {type:'line',label:'Cumulative',data:cumV,borderColor:'#10b981',backgroundColor:'rgba(16,185,129,.1)',borderWidth:2.5,fill:true,tension:.4,pointBackgroundColor:'#10b981',pointRadius:4}
+    ]
+  },{plugins:{legend:{labels:{usePointStyle:true,pointStyle:'circle'}}},
+    scales:{y:{grid:{color:'#1e2433'},beginAtZero:true},x:{grid:{color:'#1e2433'},ticks:{font:{size:10}}}}});
+}
+
+// ═══════════════════════════════════════════
+//  TASK TABLE
+// ═══════════════════════════════════════════
+function buildFilters(bkts) {
+  el('fBucket').innerHTML = '<option value="">All Buckets</option>' +
+    bkts.map(b=>`<option value="${esc(b)}">${esc(b)}</option>`).join('');
+  const lbls=[...new Set(TASKS.map(t=>t.label).filter(Boolean).map(l=>l.trim()))].sort();
+  el('fLabel').innerHTML  = '<option value="">All Labels</option>' +
+    lbls.map(l=>`<option value="${esc(l)}">${esc(l)}</option>`).join('');
+}
+
+function applyFilters() {
+  if(!TASKS.length) return;
+  const st=el('fStatus').value;
+  const bk=el('fBucket').value;
+  const pr=el('fPriority').value;
+  const lb=el('fLabel').value;
+  const sr=el('fSearch').value.toLowerCase();
+
+  const fd=TASKS.filter(t=>{
+    if(st && t.status!==st)                             return false;
+    if(bk && t.bucket!==bk)                             return false;
+    if(pr && t.priority!==pr)                           return false;
+    if(lb && !t.label.includes(lb))                     return false;
+    if(sr && !t.name.toLowerCase().includes(sr) &&
+             !t.bucket.toLowerCase().includes(sr) &&
+             !t.assigned.toLowerCase().includes(sr))    return false;
+    return true;
+  });
+
+  setText('tblCount',`Showing ${fd.length} of ${TASKS.length} tasks`);
+
+  const tbody=el('tblBody');
+  if(!fd.length){
+    tbody.innerHTML=`<tr><td colspan="9" style="text-align:center;padding:40px;color:#475569;">No tasks match your filters</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML=fd.map(t=>{
+    const sc=t.status==='Completed'?'sc':t.status==='In progress'?'sp':'sn';
+    const sd=t.status==='Completed'?'●':t.status==='In progress'?'◑':'○';
+    const pc=t.priority==='Urgent'?'pu':t.priority==='Important'?'pi':t.priority==='Low'?'pl':'pm';
+
+    // Label colour
+    const lbl=t.label.replace(' (0-3 Months)','').replace(' (3-12 Months)','').replace(' (1-3Years)','').trim();
+    const lc=t.label.includes('Short')?'#34d399':t.label.includes('Medium')?'#fbbf24':t.label.includes('Long')?'#a78bfa':'#94a3b8';
+
+    const asgn=t.assigned
+      ? t.assigned.split(';').map(a=>`<span style="display:inline-block;background:rgba(255,255,255,.05);border:1px solid #2d3748;border-radius:4px;padding:1px 5px;margin:1px;font-size:9px;">${esc(a.trim().split(' ')[0])}</span>`).join('')
+      : '<span style="color:#475569">—</span>';
+
+    const cl=t.checklist&&t.checklist.includes('/')
+      ?(()=>{ const[d,tot]=t.checklist.split('/').map(Number);const p=tot>0?Math.round(d/tot*100):0;
+          return `<div class="cl-wrap"><div class="cl-bar"><div class="cl-fill" style="width:${p}%;"></div></div><span class="cl-txt">${t.checklist}</span></div>`; })()
+      :'<span style="color:#475569;font-size:10px;">—</span>';
+
+    return `<tr>
+      <td style="max-width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600;color:#e2e8f0;">${esc(t.name)}</td>
+      <td style="white-space:nowrap;"><span style="color:${bktCol(t.bucket)};font-size:11px;font-weight:700;">●</span> <span style="font-size:11px;">${esc(t.bucket)}</span></td>
+      <td><span class="spill ${sc}">${sd} ${esc(t.status)}</span></td>
+      <td><span class="spill ${pc}">${esc(t.priority)}</span></td>
+      <td>${lbl?`<span style="background:${lc}22;color:${lc};padding:2px 7px;border-radius:4px;font-size:9px;font-weight:600;">${esc(lbl)}</span>`:'<span style="color:#475569">—</span>'}</td>
+      <td style="font-size:11px;color:#64748b;white-space:nowrap;">${t.due||'—'}</td>
+      <td style="max-width:160px;">${asgn}</td>
+      <td>${cl}</td>
+      <td style="font-size:11px;white-space:nowrap;color:${t.completed?'#34d399':'#475569'};">${t.completed?'✓ '+t.completed:'—'}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════
+//  CHART FACTORY
+// ═══════════════════════════════════════════
+function mk(id, type, data, extra={}) {
+  if(CHS[id]){CHS[id].destroy();delete CHS[id];}
+  const ex=Chart.getChart(id); if(ex) ex.destroy();
+  CHS[id]=new Chart(document.getElementById(id),{
+    type: type||'bar',
+    data,
+    options:{
+      responsive:true,
+      maintainAspectRatio:false,
+      plugins:{legend:{labels:{usePointStyle:true,pointStyle:'circle',font:{size:11}}}},
+      ...extra
+    }
+  });
+}
+
+// ═══════════════════════════════════════════
+//  HELPERS
+// ═══════════════════════════════════════════
+function bktCol(b) {
+  if(BKT_COL[b]) return BKT_COL[b];
+  let h=0; for(const c of String(b)) h=(h+c.charCodeAt(0))%PAL.length;
+  return PAL[h];
+}
+
+function fmtM(m) {
+  if(!m||!m.includes('-')) return m;
+  const[y,mo]=m.split('-');
+  return new Date(+y,+mo-1).toLocaleString('default',{month:'short',year:'2-digit'});
+}
+
+function goTab(name) {
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  document.getElementById('nt-'+name).classList.add('active');
+}
+
+function setLive(state, label) {
+  const b=el('liveBadge');
+  b.className='live-badge '+state;
+  el('liveLabel').textContent=label;
+  el('dbDot').className='ddot '+state;
+  if(state==='ok') el('dbStatus').textContent=`${TASKS.length} tasks loaded from ${CSV_PATH}`;
+  else if(state==='warn') el('dbStatus').textContent='Fetching latest data...';
+  else el('dbStatus').textContent='Could not load data — see error below';
+}
+
+function showLoad(msg){ el('loadMsg').textContent=msg; el('loadingOverlay').classList.remove('hidden'); }
+function hideLoad()   { el('loadingOverlay').classList.add('hidden'); }
+
+function showErr(msg) {
+  el('errPanel').classList.add('show');
+  el('errBody').innerHTML=`
+    <strong>Error:</strong> ${esc(msg)}<br><br>
+    <strong>What to check:</strong><br>
+    1. File <code>data/tasks.csv</code> exists in your GitHub repository<br>
+    2. Repository is <strong>public</strong> and GitHub Pages is enabled<br>
+    3. Wait 60 seconds after uploading before refreshing<br>
+    4. CSV has correct column headers (Task Name, Bucket, Status, Priority, etc.)<br><br>
+    <button onclick="el('errPanel').classList.remove('show');boot();"
+      style="background:#3b82f6;color:#fff;border:none;padding:7px 16px;border-radius:7px;cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;">
+      🔄 Try Again
+    </button>`;
+}
+
+function anim(id, to, dur=650) {
+  const e=el(id); if(!e) return;
+  const from=parseInt(e.textContent)||0;
+  const t0=performance.now();
+  function s(now){
+    const p=Math.min((now-t0)/dur,1);
+    const eq=1-Math.pow(1-p,3);
+    e.textContent=Math.round(from+(to-from)*eq);
+    if(p<1) requestAnimationFrame(s);
+  }
+  requestAnimationFrame(s);
+}
+
+function setText(id,v){ const e=el(id); if(e) e.textContent=v; }
+function el(id)       { return document.getElementById(id); }
+function esc(s)       {
+  return String(s||'')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ═══════════════════════════════════════════
+//  CHART.JS GLOBAL DEFAULTS
+// ═══════════════════════════════════════════
+Chart.defaults.color                            = '#64748b';
+Chart.defaults.borderColor                      = '#2d3748';
+Chart.defaults.font.family                      = "'Segoe UI',Tahoma,Geneva,Verdana,sans-serif";
+Chart.defaults.plugins.tooltip.backgroundColor = '#1e2433';
+Chart.defaults.plugins.tooltip.borderColor     = '#3b82f6';
+Chart.defaults.plugins.tooltip.borderWidth     = 1;
+Chart.defaults.plugins.tooltip.padding         = 10;
+Chart.defaults.plugins.tooltip.titleColor      = '#e2e8f0';
+Chart.defaults.plugins.tooltip.bodyColor       = '#94a3b8';
+
+// ═══════════════════════════════════════════
+//  AUTO REFRESH & VISIBILITY
+// ═══════════════════════════════════════════
+setInterval(boot, 5 * 60 * 1000);
+document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) boot(); });
+
+// ═══════════════════════════════════════════
+//  START
+// ═══════════════════════════════════════════
+boot();
+</script>
+</body>
 </html>
