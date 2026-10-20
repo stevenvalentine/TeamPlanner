@@ -1,5 +1,4 @@
-
-Task Name	Bucket	Goal	Status	Priority	Assigned To	Created By	Created Date	Due date	Start date	Is Recurring	Late	Completed Date	Completed By	Completed Checklist Items	Checklist Items	Labels	Notes
+Task Name,Bucket,Status,Priority,Assigned To,Created By,Created Date,Due date,Start date,Completed Date,Completed By,Completed Checklist Items,Labels
 GAM filter removal	Projects BENE	 	Completed	Medium	Steve ValentineJonathan Boden	Jonathan Boden	2026-03-19	2026-03-26	2026-03-18	 	false	2026-03-21	Jonathan Boden	 	 	 	Disposing of damaged filters into to skip.
 Common Shut laydown	Projects BENE	 	Completed	Medium	Steve ValentineJonathan BodenJoshua CarcellerBenjamin Chao	Jonathan Boden	2026-03-19	2026-03-26	2026-03-18	 	false	2026-03-26	Jonathan Boden	0/4	Return stock itemsReview directs with planner Update staging tracker Resolve any miscellaneous items 	 	Clear Common shut laydown
 Include PO and WO number in return details.
